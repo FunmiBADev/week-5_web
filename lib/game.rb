@@ -23,9 +23,10 @@ class Game
 		@current_turn = opponent_of(current_turn)
 	end
 
-	private
-
 	def opponent_of(the_player)
 		@players.select { |plyr| plyr != the_player }.first
 	end
+
+	private
+	attr_reader :players
 end

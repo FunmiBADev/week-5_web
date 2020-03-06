@@ -7,10 +7,10 @@ feature 'Switch turns' do
 		end
 	end
 
-		scenario 'after player 1 attcks' do 
+		scenario 'after player 1 attacks' do 
 			sign_in_and_play
 			click_button 'Attack'
-			click_link 'OK'
+			click_button 'OK'
 			expect(page).to have_no_content 'Turn: Sly Fox'
 			expect(page).to have_content "Turn: Sneaky Minx"
 	end
